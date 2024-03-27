@@ -13,6 +13,45 @@
     position: relative;
 }
 
+.bg .blue .b{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.bg .blue .b .left{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.bg .blue .b .right{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.bg .blue .b .box{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+}
+
+.bg .blue .b .o30{
+    background-color: #FFFFFF;
+    opacity: 30%;
+}
+
+.bg .blue .b .o10{
+    background-color: #FFFFFF;
+    opacity: 10%;
+}
+
+.bg .blue .b .o5{
+    background-color: #FFFFFF;
+    opacity: 5%;
+}
+
 .bg .blue .title{
     width: 100%;
     position: absolute;
@@ -21,7 +60,9 @@
 .bg .blue h1{
     color: white;
     text-align: center;
-
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
 }
 
 .bg .white{
