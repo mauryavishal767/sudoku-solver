@@ -6,11 +6,16 @@
     padding: 0;
 }
 
+.bg{
+    position: relative;
+}
+
 .bg .blue{
     width: 100vw;
     height: 40vh;
     background-color: #307DF6;
     position: relative;
+    z-index: 0;
 }
 
 .bg .blue .b{
@@ -75,6 +80,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
 .bg .white p{
@@ -87,7 +93,7 @@
     font-weight: 400;
 }
 
-.bg .white button{
+.bg button{
     border: 4px solid #307DF6;
     border-radius: 50px;
     padding: 8px 40px;
@@ -101,7 +107,7 @@
     letter-spacing: 2px;
 }
 
-.bg .white button:hover{
+.bg button:hover{
     background: #307DF6;
     color: #FFFFFF;
 }
