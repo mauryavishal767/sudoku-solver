@@ -13,15 +13,15 @@ document.getElementById("play").addEventListener("click", function() {
         </div>
         <div id ="board">
             <div class="sboard s0">
-                <div class="sbox" id="box00"></div>
-                <div class="sbox" id="box01"></div>
-                <div class="sbox" id="box02"></div>
-                <div class="sbox" id="box10"></div>
-                <div class="sbox" id="box11"></div>
-                <div class="sbox" id="box12"></div>
-                <div class="sbox" id="box20"></div>
-                <div class="sbox" id="box21"></div>
-                <div class="sbox" id="box22"></div>
+                <div class="sbox" id="box00">1</div>
+                <div class="sbox" id="box01">2</div>
+                <div class="sbox" id="box02">3</div>
+                <div class="sbox" id="box10">4</div>
+                <div class="sbox" id="box11">5</div>
+                <div class="sbox" id="box12">6</div>
+                <div class="sbox" id="box20">7</div>
+                <div class="sbox" id="box21">8</div>
+                <div class="sbox" id="box22">9</div>
             </div>
             <div class="sboard s1">
                 <div class="sbox" id="box03"></div>
