@@ -119,14 +119,65 @@
 /*-----------------------------------*\
   #board
 \*-----------------------------------*/
+.bg #heading {
+    display: flex;
+    justify-content: space-between;
+    background: yellow;
+}
+
+.bg #heading .su{
+    margin-bottom: 40px;
+    background: green;
+}
+
+.bg #heading .lvl{
+    background: #0000005e;
+}
+
+.bg #heading .lvl p{
+    color:white;
+}
+
+.bg #heading .lvl > div{
+    display: flex;
+    flex-direction: row;
+}
+.bg #heading .lvl > div .arrow{
+    
+}
+
+.bg #heading h1{
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color:white;
+    text-align: center;
+}
+
+.bg #heading p{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color:rgba(255, 255, 255, 0.5); 
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* lvl */
 
 .bg #center{
     z-index: 1;
     background-color: rgba(255, 0, 0, 0.142);
     position: absolute;
-    top : 0;
+    top:0;
+    margin: 30px 0;
     left : 10vw;
     width : 80vw;
+}
+
+.bg .lower{
+    display: flex;
 }
 
 /* board */
@@ -188,5 +239,6 @@
 }
 
 .bg #center #button *{
+    height: 50px;
     margin: 10px;
 }
