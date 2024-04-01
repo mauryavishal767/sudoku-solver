@@ -15,9 +15,13 @@ document.getElementById("play").addEventListener("click", function() {
             <div class="lvl">
                 <p>LEVEL<p>
                 <div>
-                    <div class="arrow" id="lArrw"></div>
-                    <p id="level">1</p>
-                    <div class="arrow" id="rArrw"></div>
+                    <button class="circle" id="lCrcl">
+                        <div class="arrow" id="lArrw"></div>
+                    </button>
+                    <p id="level" style="text-align:center;font-size: 36px;font-weight: 400;margin: 0 25px;">1</p>
+                    <button class="circle" id="rCrcl">
+                        <div class="arrow" id="rArrw"></div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -124,14 +128,20 @@ document.getElementById("play").addEventListener("click", function() {
                 </div>
             </div>
             <div id ="button">
-                <button id="new" >New</button>
-                <button id="solve" >Solve</button>
+                <div>
+                    <button id="new" >New</button>
+                    <button id="solve" >Solve</button>
+                </div>
+                <p>Choose the difficulty level as easy, moderate, or hard. Attempt to solve independently before seeking assistance from Sudoku Solver.</p>
             </div>
+
         </div>
     `;
     
     var bg = document.getElementById("bg");
     bg.appendChild(center);
-
+    var centerHeight = document.getElementById("center").offsetHeight;
+    var centerTopMargin = (window.innerHeight - centerHeight) / 2;
+    document.getElementById("center").style.marginTop = centerTopMargin + "px";
     
 });

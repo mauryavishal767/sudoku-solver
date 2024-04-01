@@ -97,7 +97,7 @@
     font-weight: 400;
 }
 
-.bg button{
+.bg button#play,button#new,button#solve{
     border: 4px solid #307DF6;
     border-radius: 50px;
     padding: 8px 40px;
@@ -111,7 +111,7 @@
     letter-spacing: 2px;
 }
 
-.bg button:hover{
+.bg button#play:hover,button#new:hover,button#solve:hover{
     background: #307DF6;
     color: #FFFFFF;
 }
@@ -122,28 +122,66 @@
 .bg #heading {
     display: flex;
     justify-content: space-between;
-    background: yellow;
+    /* background: yellow; */
 }
 
 .bg #heading .su{
     margin-bottom: 40px;
-    background: green;
+    /* background: green; */
 }
 
 .bg #heading .lvl{
-    background: #0000005e;
+    /* background: #0000005e; */
 }
 
 .bg #heading .lvl p{
     color:white;
+    font-size: 12px;
+    font-weight: 800;
+    
 }
 
 .bg #heading .lvl > div{
     display: flex;
     flex-direction: row;
 }
-.bg #heading .lvl > div .arrow{
-    
+.bg #heading .lvl > div .circle{
+    height: 36px;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-content: center;
+}
+.bg #heading .lvl > div .circle .arrow{
+    height: 9px;
+    aspect-ratio: 1;
+    rotate: 45deg;
+    border-radius: 3px;
+}
+.bg #heading .lvl > div .circle #lArrw{
+    margin: auto;
+    margin-left: 12px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.bg #heading .lvl > div .circle #rArrw{
+    margin: auto;
+    margin-right: 12px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+}
+.bg #heading .lvl > div .circle:hover{
+    background: white;
+}
+.bg #heading .lvl > div .circle:hover #lArrw{
+    border-left: 3px solid #307DF6;
+    border-bottom: 3px solid #307DF6;
+}
+.bg #heading .lvl > div .circle:hover #rArrw{
+    border-top: 3px solid #307DF6;
+    border-right: 3px solid #307DF6;
 }
 
 .bg #heading h1{
@@ -168,16 +206,18 @@
 
 .bg #center{
     z-index: 1;
-    background-color: rgba(255, 0, 0, 0.142);
+    /* background-color: rgba(255, 0, 0, 0.142); */
     position: absolute;
     top:0;
-    margin: 30px 0;
-    left : 10vw;
-    width : 80vw;
+    margin: auto 0;
+    /* margin is given in js by claculating window height */
+    left : 20vw;
+    width : 60vw;
 }
 
 .bg .lower{
     display: flex;
+    justify-content: space-between;
 }
 
 /* board */
@@ -232,13 +272,23 @@
 
 
 /* button */
-.bg #center #button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.bg #center .lower #button > div{
+    margin-top: 180px;
+    margin-bottom: 50px;
 }
 
-.bg #center #button *{
+.bg #center .lower #button #new,#solve *{
     height: 50px;
-    margin: 10px;
+}
+.bg #center .lower #button #new{
+    margin-right: 10px;
+}
+.bg #center .lower #button p{
+    width: 300px;
+    text-align:center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4E596B;
+    opacity: 70%;
 }
