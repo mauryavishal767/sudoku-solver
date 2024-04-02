@@ -146,10 +146,6 @@ document.getElementById("play").addEventListener("click", function() {
 
     document.getElementById("new").addEventListener("click",()=>{
         newBoard();
-    });
-
-    document.getElementById("solve").addEventListener("click",()=>{
-        solveBoard();
     });    
 
     var level = document.getElementById("level").innerText;
@@ -194,5 +190,9 @@ document.getElementById("play").addEventListener("click", function() {
             r.style.border = "2px solid rgba(255, 255, 255, 0.3)";
         }
     }
+
+    document.getElementById("solve").addEventListener("click",()=>{
+        solveBoard();
+    });
 });
 
