@@ -10,7 +10,7 @@ document.getElementById("play").addEventListener("click", function() {
         <div id ="heading">
             <div class="su">
                 <h1>Sudoku</h1>
-                <p>EASY DIFFICULTY</p>
+                <p id="difficulty">EASY DIFFICULTY</p>
             </div>
             <div class="lvl">
                 <p>LEVEL<p>
@@ -18,7 +18,7 @@ document.getElementById("play").addEventListener("click", function() {
                     <button class="circle" id="lCrcl">
                         <div class="arrow" id="lArrw"></div>
                     </button>
-                    <p id="level" style="text-align:center;font-size: 36px;font-weight: 400;margin: 0 25px;">1</p>
+                    <p id="level" style="text-align:center;font-size: 36px;font-weight: 400;padding: 0 25px;">1</p>
                     <button class="circle" id="rCrcl">
                         <div class="arrow" id="rArrw"></div>
                     </button>
@@ -150,6 +150,49 @@ document.getElementById("play").addEventListener("click", function() {
 
     document.getElementById("solve").addEventListener("click",()=>{
         solveBoard();
+    });    
+
+    var level = document.getElementById("level").innerText;
+    level = Number(level)
+    document.getElementById("lCrcl").addEventListener("click",()=>{
+        if(level!=1){
+            level = level - 1;
+            document.getElementById("level").innerText = level;
+            difficulty();
+            arrwCllr();
+            newBoard();
+        }
     });
-    
+    document.getElementById("rCrcl").addEventListener("click",()=>{
+        if(level!=3){
+            level = level + 1;
+            document.getElementById("level").innerText = level;
+            difficulty();
+            arrwCllr();
+            newBoard();
+        }
+    });
+    function difficulty(){
+        let diff = document.getElementById("difficulty")
+        if(level==1) diff.innerText = "EASY DIFFICULTY"
+        else if(level==2) diff.innerText = "MODERATE DIFFICULTY"
+        else diff.innerText = "HARD DIFFICULTY"
+    }
+    function arrwCllr(){
+        let l = document.getElementById("lCrcl")
+        let r = document.getElementById("rCrcl")
+        if(level==1){
+            l.style.border = "2px solid rgba(255, 255, 255, 0.3)";
+            r.style.border = "2px solid rgba(255, 255, 255, 1)";
+        }
+        else if(level==2){
+            l.style.border = "2px solid rgba(255, 255, 255, 1)";
+            r.style.border = "2px solid rgba(255, 255, 255, 1)";
+        }
+        else{
+            l.style.border = "2px solid rgba(255, 255, 255, 1)";
+            r.style.border = "2px solid rgba(255, 255, 255, 0.3)";
+        }
+    }
 });
+

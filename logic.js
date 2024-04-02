@@ -29,6 +29,7 @@ function FillBoard(board){
     }
 }
 
-function solveBoard(){
-    
+function solveBoard(board){
+
+    FillBoard(board)
 }
