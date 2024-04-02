@@ -127,7 +127,9 @@
 
 .bg #heading .su{
     margin-bottom: 40px;
-    /* background: green; */
+    display:flex;
+    flex-direction: column;
+    align-items:start;
 }
 
 .bg #heading .lvl p{
@@ -138,17 +140,24 @@
 }
 
 .bg #heading .lvl > div{
+    width: 146px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .bg #heading .lvl > div .circle{
     height: 36px;
     background: none;
-    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 100%;
     aspect-ratio: 1;
     display: flex;
     align-content: center;
+}
+.bg #heading .lvl > div #lCrcl{
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.bg #heading .lvl > div #rCrcl{
+    border: 2px solid rgba(255, 255, 255, 1);
 }
 .bg #heading .lvl > div .circle .arrow{
     height: 9px;
@@ -273,7 +282,7 @@
     margin-bottom: 50px;
 }
 
-.bg #center .lower #button #new,#solve *{
+.bg #center .lower #button #new *,#solve *{
     height: 50px;
 }
 .bg #center .lower #button #new{
