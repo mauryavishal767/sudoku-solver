@@ -192,7 +192,7 @@ document.getElementById("play").addEventListener("click", function() {
     }
 
     document.getElementById("solve").addEventListener("click",()=>{
-        solveBoard();
+        solveBoard(board);
     });
 });
 
